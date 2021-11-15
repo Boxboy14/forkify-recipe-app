@@ -1,0 +1,19 @@
+MVC Architecture : 
+
+1. Business Logic --> Code that solves the actual Business problem. Directly related to the   Business' core functionality. Example: If the Business is a bank , then the bank's priority is to keep tracks of the transactions happening in indivivual accounts. 
+
+2. State --> Essentially stores all the data about the application. It should be the single source of truth . UI should be kept in sync with the state and viceversa , it means if there are any changes in the UI like if the user inputs any kind of data then , it should sync with the state and the other way around. Some of the state libraries are Redux.
+
+3. HTTP Library --> This library is responsible for making ajax calls , this thing is necessary in real world applications.
+
+4. Application Layer (Router) --> Code that is concerned with the implementation of the application, it is least concerned about the Business logic.Example: it handles navigation and UI events.
+
+5. Presentation Layer (UI Layer) --> This is the code which is concerned about the visible part of the application. It Essentially displays application state to the keep everything in sync with the the state of the application.
+
+////////////////////////////////////////////////
+config.js file - responsible for holding the variables and data which is essential for the entire project 
+
+//////////////////////////////////////////
+Publisher-Subscriber design pattern : 
+1. Publisher - the code which knows when to react 
+2. Subscriber - the code which wants to react , which means this code should be executed when the event occurs , the Publisher does not know that the Subscriber exists bcoz the view does not know that the Subscriber exists inside the controller 
